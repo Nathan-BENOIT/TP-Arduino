@@ -20,6 +20,7 @@ function changeElementDisplay(element, state){
 }
 
 function changeElementInnerHTML(element, data) {
+    console.log(data.length);
     for(i = 0; i < data.length; i++){
         document.getElementById(element).innerHTML += ('<p>Id :' + data[i].id + ', nom : ' + data[i].nom + ', valeur : ' + data[i].value + '</p>');
     }

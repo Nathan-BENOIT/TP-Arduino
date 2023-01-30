@@ -1,4 +1,3 @@
 [
-    {"id":"1", "nom":"Arduino", "value":"0"},
-    {"id":"2", "nom":"Arduino 2", "value":"1"}
+    {"id":"1", "nom":"Arduino", "value":"0"},{"id":"2", "nom":"Arduino 2", "value":"1"}
 ]
