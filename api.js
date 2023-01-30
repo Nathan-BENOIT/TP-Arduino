@@ -1,9 +1,28 @@
-function displayListDevices(url) {
+function getListDevices(url) {
+    changeElementDisplay('button', 'none');
+    changeElementDisplay('retour', '');
     return fetch(url)
     .then(response => response.json())
     .then(data => {
-        document.getElementById("list").innerHTML = JSON.stringify(data);
+        changeElementInnerHTML('list', data);
+        console.log(data);
     });
+}
+
+function goBack(){
+    document.getElementById('list').innerHTML = '';
+    changeElementDisplay('button', '');
+    changeElementDisplay('retour', 'none');
+}
+
+function changeElementDisplay(element, state){
+    document.getElementById(element).style.display = state;
+}
+
+function changeElementInnerHTML(element, data) {
+    for(i = 0; i < data.length; i++){
+        document.getElementById(element).innerHTML += ('<p>Nom : ' + data[i].nom + ', code : ' + data[i].code + '</p>');
+    }
 }
 
 function postData(url, data) {
