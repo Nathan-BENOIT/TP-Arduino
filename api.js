@@ -21,7 +21,7 @@ function changeElementDisplay(element, state){
 
 function changeElementInnerHTML(element, data) {
     for(i = 0; i < data.length; i++){
-        document.getElementById(element).innerHTML += ('<p>Nom : ' + data[i].nom + ', code : ' + data[i].code + '</p>');
+        document.getElementById(element).innerHTML += ('<p>Id :' + data[i].id + ', nom : ' + data[i].nom + ', valeur : ' + data[i].value + '</p>');
     }
 }
 
